@@ -1,0 +1,5 @@
+nome = input('\033[37mDigite seu nome completo:\033[m')
+print(nome.upper())
+print(nome.lower())
+print('Seu nome tem \033[36m{}\033[m letras'.format(len(nome.replace(' ',''))))
+print('Seu primeiro nome é \033[36m{}\033[m e ele tem \033[36m{}\033[m letras'.format(nome.split()[0], len(nome.split()[0])))

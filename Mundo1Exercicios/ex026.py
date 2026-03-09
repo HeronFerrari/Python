@@ -1,0 +1,5 @@
+frase = input('Digite uma \033[31mfrase:\033[m ').strip()
+frase = frase.lower()
+print('A letra a aparece {} vezes na frase'.format(frase.count('a')))
+print('A \033[32mprimeira letra\033[m a apareceu na posição {}'.format(frase.find('a')+1))
+print('A \033[31múltima letra\033[m a apareceu na posição {}'.format(frase.rfind('a')+1))
