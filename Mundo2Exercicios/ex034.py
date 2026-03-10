@@ -7,7 +7,7 @@ while resposta == 'S':
     while idade > 135 or idade < 0:
         print('Digite uma idade válida: ', end='')
         idade = int(input(''))
-    if idade > 18:
+    if idade >= 18:
         pessoasmaiores += 1
     sexo = input(('Qual seu sexo ? [M/F] ')).strip().upper()
     while sexo[0] != 'M' and sexo[0] != 'F':
@@ -24,4 +24,4 @@ while resposta == 'S':
         print('Digite Sim ou não apenas: ',end='')
         resposta = input('').strip().upper()
     
-print(f'HÁ {pessoasmaiores} pessoas maiores de 18 anos\nHÁ {homens} homens\nHÁ {mulheresmenores} mulheres com menos de 20 anos\n')
+print(f'HÁ {pessoasmaiores} pessoas maiores de 18 anos\nHÁ {homens} homens cadastrados\nHÁ {mulheresmenores} mulheres com menos de 20 anos\n')
