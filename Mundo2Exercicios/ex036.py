@@ -1,22 +1,28 @@
 saque = int(input('Digite o valor a ser sacado: R$'))
-cedula50 = saque // 50
-cedula20 = saque // 20
-cedula10 = saque // 10
-cedula1 = saque // 1
+total = saque
+cedula = 50
+totced = 0
 
 print('-='*20)
 print('BANCO CENTRAL DO PASSARINI')
 print('-='*20)
 
-if saque - cedula50*50 > 0:
-    saque = saque - cedula50*50
-    cedula20 = saque // 20
-if saque - cedula20 * 20 > 0:
-        saque = saque - cedula20 * 20
-        cedula10 = saque // 10
-if saque - cedula10 * 10 > 0:
-        saque = saque - cedula10 * 10
-        cedula1 = saque // 1
+while True:
+    if total >= cedula:
+        total -= cedula
+        totced += 1
+    else:
+        if totced > 0:
+                print(f'Total de {totced} cédula(s) de R$ {cedula},00')
+        totced = 0
+        if cedula == 50:
+                cedula = 20
+        elif cedula == 20:
+                cedula = 10
+        elif cedula == 10:
+              cedula = 1
+        if total == 0:
+                break
 
-print(f'Cédulas de R$ 50: {cedula50}\nCédulas de R$ 20: {cedula20}\nCédulas de R$ 10: {cedula10}\nCédulas de R$ 01: {cedula1}')
+print('=-'*30)
 print('\nOPERAÇÃO FINALIZADA.')
