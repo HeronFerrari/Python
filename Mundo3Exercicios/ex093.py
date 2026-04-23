@@ -4,13 +4,10 @@ dict['Nome'] = nome
 partidas = int(input(f'Quantas partidas {nome} jogou ? '))
 gols = []
 
-totgols = 0
-
 for c in range(0,partidas):
     gols.append(int(input(f'Quantos gols ele fez na partida {c+1} ? ')))
-    totgols += gols[c]
-dict['Gols'] = gols
-dict['Total'] = totgols
+dict['Gols'] = gols[:]
+dict['Total'] = sum(gols)
 
 print('-='*30)
 
