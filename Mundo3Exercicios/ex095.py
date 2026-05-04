@@ -3,17 +3,16 @@ gols = []
 jogadores = list()
 
 while True:
+    jogador.clear()
     jogador['Nome'] = input(str('Digite o nome do jogador: ')).capitalize()
     partidas = int(input(f'Quantas partidas {jogador["Nome"]} jogou ? '))
-
+    gols.clear()
     for c in range(0,partidas):
         gols.append(int(input(f'Quantos gols ele fez na partida {c+1} ? ')))
     jogador['Gols'] = gols[:]
     jogador['Total'] = sum(gols)
     jogadores.append(jogador.copy())
-    jogador.clear()
-    gols.clear()
-    
+
     resp = input('Quer continuar ? [S/N]').upper()[0]
     while resp not in 'SN':
         resp = input('ERRO ! Responda apenas S ou N: ').upper()[0]
@@ -22,7 +21,7 @@ while True:
 
 print('-='*30)
 print(f'{'cod':<5}',end='')
-for i in jogadores[0].keys():
+for i in jogador.keys():
     print(f'{i:<15}', end='')
 print()
 

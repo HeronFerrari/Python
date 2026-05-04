@@ -1,0 +1,6 @@
+from utilidadesCeV import moeda
+
+numero = float(input('Digite um valor R$ '))
+
+moeda.resumo(numero,35,22)
+
