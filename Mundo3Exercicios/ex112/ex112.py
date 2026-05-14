@@ -1,4 +1,5 @@
-from utilidadesCeV import moeda, dado
+from utilidadescev import dado
+from utilidadescev import moeda
 
 numero = dado.leiaDinheiro('Digite um valor R$ ')
 

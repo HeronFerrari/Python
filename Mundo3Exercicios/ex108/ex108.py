@@ -1,4 +1,4 @@
-from utilidadesCeV import moeda
+import moeda
 
 numero = float(input('Digite um valor R$ '))
 
